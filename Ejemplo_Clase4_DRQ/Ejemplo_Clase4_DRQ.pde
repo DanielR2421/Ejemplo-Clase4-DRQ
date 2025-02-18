@@ -110,7 +110,8 @@ void draw() {
  
  // el comando nf transforma variables de numeros a strings
  // El signo + lo une todo
- timeString = nf(h) + nf(m) + nf(s);
+ //Al comando nf se le puede agregar los decimales asi = nf(variable int, digitos)
+ timeString = nf(h, 2) + ":" + nf(m, 2) + ":" + nf(s, 2);
  
  //Al pasar las variables del tiempo al formato text esta actualizando los varolers del reloj de acuerdo al real
  background(0);
