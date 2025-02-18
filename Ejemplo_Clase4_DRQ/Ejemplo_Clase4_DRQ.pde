@@ -68,23 +68,54 @@
 
 //EJERCICIO3:
 
-int posX = 0;
+//int posX = 0;
+
+//void setup(){
+ //size(500, 500);
+ //frameRate(500);
+//}
+
+//void draw(){
+// background(200, 20,100);
+     //x1, y1, x2, y2
+ //line(posX, 10, posX, height);
+ 
+ //posX++ = posX+1
+// posX++;
+
+// if (posX > width) {
+//  posX = 0;
+
+//}
+//}
+
+//EJERCICIO 4: Uso del reloj del computador
+
+int h;
+int m;
+int s;
+
+String timeString;
 
 void setup(){
  size(500, 500);
- frameRate(500);
+ textAlign(CENTER, CENTER);
+ textSize(40);
 }
 
-void draw(){
- background(200, 20,100);
-     //x1, y1, x2, y2
- line(posX, 10, posX, height);
+void draw() {
+ h = hour(); 
+ m = minute();
+ s = second();
  
- //posX++ = posX+1
- posX++;
+ // el comando nf transforma variables de numeros a strings
+ // El signo + lo une todo
+ timeString = nf(h) + nf(m) + nf(s);
+ 
+ //Al pasar las variables del tiempo al formato text esta actualizando los varolers del reloj de acuerdo al real
+ background(0);
+ text(timeString, width /2, height/2);
 
- if (posX > width) {
-  posX = 0;
 
-}
+
 }
